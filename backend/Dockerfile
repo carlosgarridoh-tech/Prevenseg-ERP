@@ -1,5 +1,5 @@
-# Imagen base con Node.js
-FROM node:20-slim
+# Imagen base con Node.js (22+, requerido por la librería de Supabase más reciente)
+FROM node:22-slim
 
 # Instala LibreOffice (para convertir Word/Excel a PDF) y las librerias que
 # necesita Chrome para poder correr WhatsApp Web por dentro
