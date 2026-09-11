@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Al imprimir la ficha del alumno o el comprobante de pago, ocupan casi toda la hoja carta */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #ficha-imprimible,
+  #ficha-imprimible *,
+  #comprobante-imprimible,
+  #comprobante-imprimible * {
+    visibility: visible;
+  }
+  #ficha-imprimible,
+  #comprobante-imprimible {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 8.5in !important;
+    max-width: none !important;
+    min-height: 10in;
+    padding: 1in !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    font-size: 1.1rem;
+  }
+}
